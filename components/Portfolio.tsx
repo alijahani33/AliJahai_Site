@@ -313,14 +313,34 @@ export default function Portfolio() {
   const t = dict[lang];
   const isRtl = lang === "fa";
 
-  const handleContactSubmit = (e: React.FormEvent) => {
+  const handleContactSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    
+    const formData = new FormData(e.currentTarget);
+    formData.append("access_key", "c64ec3df-a69d-42a3-a11e-ce11dfdd5b63");
+    
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setFormSubmitted(true);
+        e.currentTarget.reset();
+        setTimeout(() => setFormSubmitted(false), 5000);
+      } else {
+        alert(lang === "fa" ? "خطا در ارسال پیام. لطفاً دوباره تلاش کنید." : "Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      alert(lang === "fa" ? "خطای شبکه. لطفاً از طریق ایمیل ارتباط بگیرید." : "Network error. Please use direct email.");
+    } finally {
       setIsSubmitting(false);
-      setFormSubmitted(true);
-      setTimeout(() => setFormSubmitted(false), 5000);
-    }, 1200);
+    }
   };
 
   // Custom Spring Animation Config
@@ -722,12 +742,34 @@ export default function Portfolio() {
                 </p>
               </div>
 
+              <div className="flex flex-col sm:flex-row gap-4 mb-2">
+                <a href="tel:09137901844" className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-black/30 hover:border-tech-indigo transition-all flex-1 group">
+                  <div className="w-10 h-10 rounded-full bg-tech-indigo/10 text-tech-indigo flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Phone size={16} />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-0.5">{isRtl ? "تلفن مستقیم" : "Direct Phone"}</div>
+                    <div className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 font-mono" dir="ltr">0913 790 1844</div>
+                  </div>
+                </a>
+                <a href="mailto:alijahani919@gmail.com" className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-black/30 hover:border-emerald-green transition-all flex-1 group">
+                  <div className="w-10 h-10 rounded-full bg-emerald-green/10 text-emerald-green flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Mail size={16} />
+                  </div>
+                  <div>
+                    <div className="text-[10px] font-bold text-zinc-500 uppercase tracking-wider mb-0.5">{isRtl ? "پست الکترونیک" : "Email Address"}</div>
+                    <div className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 font-mono">alijahani919@gmail.com</div>
+                  </div>
+                </a>
+              </div>
+
               <form onSubmit={handleContactSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
                     <label className="text-[9px] font-semibold text-zinc-450 uppercase tracking-wider">{t.form_name}</label>
                     <input
                       type="text"
+                      name="name"
                       required
                       className="w-full text-xs px-3.5 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-black/30 focus:outline-none focus:border-tech-indigo transition-all"
                     />
@@ -736,6 +778,7 @@ export default function Portfolio() {
                     <label className="text-[9px] font-semibold text-zinc-450 uppercase tracking-wider">{t.form_email}</label>
                     <input
                       type="email"
+                      name="email"
                       required
                       className="w-full text-xs px-3.5 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-black/30 focus:outline-none focus:border-tech-indigo transition-all font-mono"
                     />
@@ -745,6 +788,7 @@ export default function Portfolio() {
                 <div className="space-y-1.5">
                   <label className="text-[9px] font-semibold text-zinc-450 uppercase tracking-wider">{t.form_msg}</label>
                   <textarea
+                    name="message"
                     required
                     rows={4}
                     className="w-full text-xs px-3.5 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-black/30 focus:outline-none focus:border-tech-indigo transition-all resize-none"
