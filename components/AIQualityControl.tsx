@@ -44,7 +44,7 @@ export default function AIQualityControl({ lang }: { lang: "en" | "fa" }) {
 
       // 2. Move items along the conveyor belt (x increases)
       setItems((prevItems) => {
-        let updated = prevItems.map((item) => {
+        const updated = prevItems.map((item) => {
           const nextX = item.x + 2; // move right
           let scanned = item.scanned;
           
