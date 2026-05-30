@@ -387,7 +387,7 @@ export default function Portfolio() {
                 {/* Avatar Image */}
                 <div className="relative inline-block">
                   <div className="absolute inset-0 bg-gradient-to-br from-tech-indigo to-emerald-green rounded-3xl blur-md opacity-30 animate-pulse"></div>
-                  <img src="./avatar.png" alt="Ali Jahani Avatar" className="relative w-28 h-28 object-cover rounded-3xl border border-white/10 shadow-xl" />
+                  <img src="/avatar.png" alt="Ali Jahani Avatar" className="relative w-28 h-28 object-cover rounded-3xl border border-white/10 shadow-xl" />
                 </div>
                 
                 <div className="space-y-4">
