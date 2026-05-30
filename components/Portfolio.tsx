@@ -387,7 +387,7 @@ export default function Portfolio() {
                 {/* Avatar Image */}
                 <div className="relative inline-block">
                   <div className="absolute inset-0 bg-gradient-to-br from-tech-indigo to-emerald-green rounded-3xl blur-md opacity-30 animate-pulse"></div>
-                  <img src="/avatar.png" alt="Ali Jahani Avatar" className="relative w-28 h-28 object-cover rounded-3xl border border-white/10 shadow-xl" />
+                  <img src="./avatar.png" alt="Ali Jahani Avatar" className="relative w-28 h-28 object-cover rounded-3xl border border-white/10 shadow-xl" />
                 </div>
                 
                 <div className="space-y-4">
@@ -743,7 +743,7 @@ export default function Portfolio() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-2">
-                <a href="tel:09137901844" className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-black/30 hover:border-tech-indigo transition-all flex-1 group">
+                <a href="tel:09137901844" className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-black/30 hover:border-tech-indigo transition-all flex-1 group">
                   <div className="w-10 h-10 rounded-full bg-tech-indigo/10 text-tech-indigo flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Phone size={16} />
                   </div>
@@ -752,7 +752,7 @@ export default function Portfolio() {
                     <div className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 font-mono" dir="ltr">0913 790 1844</div>
                   </div>
                 </a>
-                <a href="mailto:alijahani919@gmail.com" className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-black/30 hover:border-emerald-green transition-all flex-1 group">
+                <a href="mailto:alijahani919@gmail.com" className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-black/30 hover:border-emerald-green transition-all flex-1 group">
                   <div className="w-10 h-10 rounded-full bg-emerald-green/10 text-emerald-green flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail size={16} />
                   </div>
@@ -771,7 +771,7 @@ export default function Portfolio() {
                       type="text"
                       name="name"
                       required
-                      className="w-full text-xs px-3.5 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-black/30 focus:outline-none focus:border-tech-indigo transition-all"
+                      className="w-full text-xs px-3.5 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-black/30 focus:outline-none focus:border-tech-indigo transition-all"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -780,7 +780,7 @@ export default function Portfolio() {
                       type="email"
                       name="email"
                       required
-                      className="w-full text-xs px-3.5 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-black/30 focus:outline-none focus:border-tech-indigo transition-all font-mono"
+                      className="w-full text-xs px-3.5 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-black/30 focus:outline-none focus:border-tech-indigo transition-all font-mono"
                     />
                   </div>
                 </div>
@@ -791,7 +791,7 @@ export default function Portfolio() {
                     name="message"
                     required
                     rows={4}
-                    className="w-full text-xs px-3.5 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-black/30 focus:outline-none focus:border-tech-indigo transition-all resize-none"
+                    className="w-full text-xs px-3.5 py-3 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-black/30 focus:outline-none focus:border-tech-indigo transition-all resize-none"
                   />
                 </div>
 
