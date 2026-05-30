@@ -120,7 +120,23 @@ export default function RastarBPMSDemo({ lang }: { lang: "en" | "fa" }) {
   const isRtl = lang === "fa";
 
   return (
-    <div className="grid grid-cols-1 gap-6 mt-6">
+    <div className="space-y-6">
+      {/* Product Branding */}
+      <div className="flex items-center gap-4 mb-2">
+        <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-tech-indigo to-blue-500 text-white shadow-lg shadow-tech-indigo/20">
+          <Terminal size={24} />
+        </div>
+        <div>
+          <h2 className="text-xl font-black text-zinc-900 dark:text-white">
+            {isRtl ? "پلتفرم گردش‌کار راستار (Rastar BPMS)" : "Rastar BPMS Platform"}
+          </h2>
+          <p className="text-xs text-zinc-500 dark:text-zinc-400 font-semibold mt-1">
+            {isRtl ? "موتور فرم‌ساز و مدیریت فرآیندهای سازمانی مبتنی بر هوش مصنوعی" : "AI-Powered Enterprise Form Builder & Workflow Engine"}
+          </p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 gap-6">
       {/* Visual designer & Signature Card */}
       <div className="glass-card rounded-2xl p-6 flex flex-col justify-between shadow-lg relative overflow-hidden group hover:border-tech-indigo transition-all duration-300">
         <div className="absolute top-0 right-0 w-32 h-32 bg-tech-indigo/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -350,6 +366,7 @@ export default function RastarBPMSDemo({ lang }: { lang: "en" | "fa" }) {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 }

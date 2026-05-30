@@ -108,7 +108,23 @@ export default function TicketingDashboard({ lang }: { lang: "en" | "fa" }) {
     .join(" ");
 
   return (
-    <div className="grid grid-cols-1 gap-6 mt-6">
+    <div className="space-y-6">
+      {/* Product Branding */}
+      <div className="flex items-center gap-4 mb-2">
+        <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-green to-teal-500 text-white shadow-lg shadow-emerald-500/20">
+          <Activity size={24} />
+        </div>
+        <div>
+          <h2 className="text-xl font-black text-zinc-900 dark:text-white">
+            {isRtl ? "سامانه تیکتینگ و پایش متمرکز" : "Centralized Ticketing & Monitoring"}
+          </h2>
+          <p className="text-xs text-zinc-500 dark:text-zinc-400 font-semibold mt-1">
+            {isRtl ? "پلتفرم مدیریت SLA، حوادث شبکه و یکپارچه با Zabbix" : "SLA, Incident Management Platform Integrated with Zabbix"}
+          </p>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 gap-6">
       {/* Metrics Panel */}
       <div className="glass-card rounded-2xl p-6 flex flex-col justify-between shadow-lg border border-zinc-200/50 dark:border-zinc-800/50 hover:border-emerald-green transition-all duration-300">
         <div>
@@ -331,6 +347,7 @@ export default function TicketingDashboard({ lang }: { lang: "en" | "fa" }) {
           </span>
         </div>
       </div>
+    </div>
     </div>
   );
 }

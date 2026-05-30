@@ -15,6 +15,14 @@ import {
   Activity,
   Send,
   Zap,
+  Network,
+  Server,
+  Terminal,
+  Code2,
+  Layers,
+  Database,
+  BrainCircuit,
+  Phone
 } from "lucide-react";
 import RastarBPMSDemo from "./RastarBPMSDemo";
 import TicketingDashboard from "./TicketingDashboard";
@@ -92,68 +100,72 @@ const dict = {
     loc_val: "Bushehr, Jam",
     cert_lbl: "Certificates & Courses",
     thesis_lbl: "M.Sc. Thesis: Drone Image Scene Detection using Deep Learning (GPA: 18.5/20)",
+    download_cv: "Download Resume (PDF)",
+    direct_contact: "Direct Contact",
   },
   fa: {
     name: "سید علی جهانی",
-    title: "جانشین معاونت فناوری اطلاعات و ارتباطات",
-    sub_title: "دماوند انرژی عسلویه (صنعت پتروشیمی)",
+    title: "معاون فناوری اطلاعات و معمار ارشد سیستم‌های ترکیبی",
+    sub_title: "پروژه دماوند انرژی عسلویه (قطب صنعت پتروشیمی)",
     about_nav: "درباره من",
-    experience_nav: "سوابق شغلی",
-    products_nav: "محصولات",
-    projects_nav: "پروژه‌ها",
+    experience_nav: "تجربیات حرفه‌ای",
+    products_nav: "محصولات بومی",
+    projects_nav: "پروژه‌های کلیدی",
     contact_nav: "ارتباط با من",
-    about_pitch: "معماری زیرساخت‌های حیاتی شبکه در صنایع پتروشیمی در روز، و مهندسی سیستم‌های نرم‌افزاری و مدل‌های هوش مصنوعی با کارایی بالا در شب. متخصص دووجهی (Hybrid) پل زننده میان شبکه‌های صنعتی عسلویه و توسعه میکروسرویس‌های خودمستقر.",
-    about_p1: "من در تامین پایداری و امنیت بستر ارتباطی صنایع بزرگ فعالیت می‌کنم. در شرکت دماوند انرژی عسلویه، به عیب‌یابی پیچیده‌ترین مشکلات شبکه (از جمله ریشه‌یابی و رفع معضل لوپ‌های پخش یک‌ساله) و راه‌اندازی مانیتورینگ پیشگیرانه پرداختم. همزمان، سامانه‌های بومی فرم‌ساز و موتورهای گردش‌کار سازمانی مبتنی بر هوش مصنوعی را توسعه می‌دهم.",
-    choose_path: "مسیر خود را انتخاب کنید",
-    audience_desc: "متریک‌ها و توانمندی‌های مهندسی را متناسب با مشخصات خود فیلتر کنید:",
-    enterprises: "سازمان‌های بزرگ",
+    about_pitch: "تخصص در طراحی و ایمن‌سازی زیرساخت‌های حیاتی شبکه در مقیاس صنعتی، توامان با معماری و توسعه سیستم‌های نرم‌افزاری با توان عملیاتی بالا. من یک معمار دووجهی هستم که شکاف میان شبکه‌های پیچیده صنعتی (توسعه توپولوژی‌های امن و مانیتورینگ زبیکس) و سامانه‌های مقیاس‌پذیر تحت وب را پر می‌کنم.",
+    about_p1: "رسالت من تضمین امنیت و تاب‌آوری در شریان‌های حیاتی صنعت است. در پروژه دماوند انرژی عسلویه، مدیریت زیرساخت‌های شبکه‌ای را بر عهده دارم که قلب تپنده عملیات پتروشیمی هستند؛ از مهار بحران‌های فلج‌کننده نظیر لوپ‌های شبکه‌ای تا استقرار کامل سیستم‌های هشدار بلادرنگ. همزمان، با توسعه موتورهای گردش‌کار سازمانی و پیاده‌سازی خزانه جستجوی هوشمند مبتنی بر هوش مصنوعی، مسیر تحول دیجیتال را هموار می‌سازم.",
+    choose_path: "انتخاب مسیر تخصصی",
+    audience_desc: "توانمندی‌ها و دستاوردهای مهندسی من را بر اساس نیاز کسب‌وکار خود بررسی کنید:",
+    enterprises: "سازمان‌های کلان",
     startups: "استارتاپ‌ها",
-    tech_peers: "همکاران فنی",
-    enterprises_desc: "تضمین پایداری ۹۹.۹ درصدی در شبکه‌های حساس صنعتی پتروشیمی. سخت‌سازی زیرساخت سوئیچینگ مرکزی، جداسازی ترافیکی VLANها، پیاده‌سازی Port Security و مانیتورینگ زبیکس.",
-    startups_desc: "طراحی و توسعه سامانه‌های سازمانی خودمستقر با لود سریع (FastAPI, React 19). بهینه‌سازی کانتینرهای Docker و ایجاد اتوماسیون‌های سفارشی گردش‌کار جهت دیجیتالی‌سازی فرآیندها.",
-    tech_peers_desc: "پژوهشگر ارشد هوش مصنوعی با معدل ۱۸.۵ در حوزه سنجش از دور. توسعه‌دهنده مدل‌های یادگیری عمیق بینایی ماشین (CNN) با سرعت پردازش تصویر ۴۰۰ فریم بر ثانیه.",
-    skills_title: "مهارت‌ها و فناوری‌ها",
-    exp_title: "سوابق شغلی",
-    edu_title: "سوابق تحصیلی",
-    contact_title: "همکاری در پروژه‌های صنعتی و توسعه فناوری",
-    contact_subtitle: "آماده ارائه مشاوره در زمینه مانیتورینگ پیشگیرانه شبکه، مکانیزه کردن فرآیندهای سازمانی و پیاده‌سازی بینایی ماشین در صنعت.",
-    form_name: "نام شما",
-    form_email: "نشانی ایمیل",
-    form_msg: "متن پیام شما",
-    form_send: "ارسال پیام امن",
-    form_success: "پیام شما با موفقیت ارسال شد!",
-    sending: "در حال ارسال...",
-    loc_lbl: "موقعیت",
-    loc_val: "بوشهر، جم",
-    cert_lbl: "دوره‌ها و گواهینامه‌ها",
-    thesis_lbl: "پایان‌نامه ارشد: تشخیص صحنه تصاویر پهپادی با یادگیری عمیق (معدل: ۱۸.۵)",
+    tech_peers: "جامعه مهندسین",
+    enterprises_desc: "تضمین پایداری ۹۹.۹ درصدی در زیرساخت‌های شبکه‌ای حساس. استقرار معماری امن با نوسازی هسته سوئیچینگ، ایزوله‌سازی قدرتمند VLANها، اعمال سیاست‌های سخت‌گیرانه Port Security و راه‌اندازی سیستم هشدار لحظه‌ای (Syslog).",
+    startups_desc: "طراحی و توسعه معماری نرم‌افزاری بسیار منعطف و خودمستقر (FastAPI، React، Docker). معماری موتورهای بصری گردش‌کار و پلتفرم‌های جامع تیکتینگ به منظور اتوماسیون کامل فرآیندهای سازمانی.",
+    tech_peers_desc: "پژوهشگر مقطع کارشناسی ارشد در زمینه طبقه‌بندی تصاویر سنجش از دور با استفاده از یادگیری عمیق. طراح و توسعه‌دهنده مدل‌های شبکه عصبی پیچشی (CNN) با قابلیت پردازش بی‌درنگ تصویر در نرخ ۴۰۰ فریم بر ثانیه و دقت ۹۹ درصد.",
+    skills_title: "پشته فناوری و مهارت‌ها",
+    exp_title: "سوابق حرفه‌ای و دستاوردها",
+    edu_title: "سوابق تحصیلی و آکادمیک",
+    contact_title: "خلق ارزش در تقاطع امنیت و هوش مصنوعی",
+    contact_subtitle: "برای مشاوره در زمینه ممیزی امنیت شبکه، اتوماسیون فرآیندهای سازمانی یا پیاده‌سازی راهکارهای هوش مصنوعی در صنعت، با من در ارتباط باشید.",
+    form_name: "نام و نام خانوادگی",
+    form_email: "پست الکترونیک",
+    form_msg: "شرح پیام یا درخواست",
+    form_send: "ارسال پیام در بستر امن",
+    form_success: "پیام شما با موفقیت ارسال شد و در اسرع وقت پاسخ داده خواهد شد.",
+    sending: "در حال پردازش و ارسال...",
+    loc_lbl: "موقعیت مکانی",
+    loc_val: "ایران، بوشهر، جم",
+    cert_lbl: "گواهینامه‌های تخصصی",
+    thesis_lbl: "پایان‌نامه ارشد: تشخیص صحنه در تصاویر پهپادی با یادگیری عمیق (معدل عالی: ۱۸.۵)",
+    download_cv: "دانلود رزومه (PDF)",
+    direct_contact: "ارتباط مستقیم",
   },
 };
 
 const audienceMetrics = {
   enterprises: [
-    { labelEn: "Network Uptime", labelFa: "پایداری شبکه صنعتی", value: "99.9%" },
-    { labelEn: "MTTR Reduction", labelFa: "کاهش زمان رفع خرابی", value: "-40%" },
-    { labelEn: "Switch Security", labelFa: "سخت‌سازی سوئیچ‌ها", value: "Hardened" },
+    { labelEn: "Network Uptime", labelFa: "ضریب دسترسی پذیری", value: "99.9%" },
+    { labelEn: "MTTR Reduction", labelFa: "کاهش زمان رفع بحران", value: "-40%" },
+    { labelEn: "Switch Security", labelFa: "سخت‌سازی امنیتی", value: "Hardened" },
   ],
   startups: [
-    { labelEn: "AI Form Creation", labelFa: "سرعت ساخت فرم گردش‌کار", value: "<10m" },
-    { labelEn: "Digitalization Time", labelFa: "کاهش زمان توسعه فرآیند", value: "-60%" },
-    { labelEn: "Stack Architecture", labelFa: "استقرار میکروسرویس", value: "Docker-Ready" },
+    { labelEn: "AI Form Creation", labelFa: "ساخت فرم هوشمند", value: "<10m" },
+    { labelEn: "Digitalization Time", labelFa: "شتاب‌دهی توسعه", value: "-60%" },
+    { labelEn: "Stack Architecture", labelFa: "معماری میکروسرویس", value: "Docker-Ready" },
   ],
   tech_peers: [
-    { labelEn: "CNN Inference", labelFa: "سرعت پردازش تصویر", value: "400 FPS" },
-    { labelEn: "Master's GPA", labelFa: "معدل ارشد (هوش مصنوعی)", value: "18.5/20" },
-    { labelEn: "Code Quality", labelFa: "معماری تمیز و ایمن", value: "Prod-Grade" },
+    { labelEn: "CNN Inference", labelFa: "نرخ پردازش تصویر", value: "400 FPS" },
+    { labelEn: "Master's GPA", labelFa: "معدل هوش مصنوعی", value: "18.5/20" },
+    { labelEn: "Code Quality", labelFa: "معیار معماری تمیز", value: "Prod-Grade" },
   ],
 };
 
 const experienceData = [
   {
     roleEn: "Senior IT Assistant Director",
-    roleFa: "کارشناس ارشد فناوری اطلاعات (جانشین معاونت)",
+    roleFa: "جانشین معاونت فناوری اطلاعات و ارتباطات",
     companyEn: "Damavand Energy Assaluyeh (Petrochemical Industry)",
-    companyFa: "دماوند انرژی عسلویه (صنعت پتروشیمی)",
+    companyFa: "پروژه دماوند انرژی عسلویه (پتروشیمی)",
     dateEn: "Oct 2025 - Present",
     dateFa: "مهر ۱۴۰۴ - اکنون",
     achievementsEn: [
@@ -164,16 +176,16 @@ const experienceData = [
       "Engineered an AI-based semantic search engine (NLP) to index and retrieve legal/technical documents (patent pending).",
     ],
     achievementsFa: [
-      "مدیریت پروژه فرم‌ساز هوشمند و گردش‌کار راستار (Rastar)، با امکان ایجاد فرم در کمتر از ۱۰ دقیقه با هوش مصنوعی.",
-      "عیب‌یابی، شناسایی ریشه و رفع مشکل پیچیده لوپ شبکه (Broadcast Loop) که بیش از ۱ سال باعث ناپایداری‌های مقطعی شده بود.",
-      "رهبری نوسازی سخت‌افزاری و ارتقای فریمور تجهیزات سوئیچینگ به منظور سخت‌سازی امنیت ترافیک شبکه (Security Hardening).",
-      "طراحی و پیاده‌سازی سامانه تیکتینگ بومی پشتیبانی مجهز به داشبوردهای مدیریتی جهت افزایش شفافیت خدمات IT.",
-      "توسعه موتور جستجوی هوشمند مبتنی بر NLP برای طبقه‌بندی و دسترسی سریع به اسناد حقوقی و فنی سازمان (در حال ثبت اختراع).",
+      "معماری و رهبری توسعه پلتفرم هوشمند گردش‌کار راستار (Rastar)، مجهز به دستیار هوش مصنوعی جهت استقرار فرم‌های پیچیده در کمتر از ۱۰ دقیقه.",
+      "تشخیص ریشه و مهار قطعی بحران لوپ شبکه (Broadcast Loop) که به مدت یک سال پایداری شبکه را مختل کرده بود؛ بازگردانی ضریب پایداری به ۱۰۰٪.",
+      "مدیریت کلان نوسازی زیرساخت سوئیچینگ و ارتقای فریم‌ور تجهیزات با هدف اعمال بالاترین استانداردهای سخت‌سازی امنیتی شبکه.",
+      "توسعه سامانه تیکتینگ بومی مجهز به داشبوردهای مانیتورینگ لحظه‌ای جهت پایش دقیق SLA و افزایش شفافیت خدمات.",
+      "طراحی موتور جستجوی معنایی مبتنی بر پردازش زبان طبیعی (NLP) جهت طبقه‌بندی هوشمند اسناد حقوقی و فنی سازمان.",
     ],
   },
   {
     roleEn: "IT Specialist",
-    roleFa: "کارشناس فناوری اطلاعات و ارتباطات",
+    roleFa: "کارشناس ارشد فناوری اطلاعات",
     companyEn: "Damavand Energy Assaluyeh",
     companyFa: "پروژه دماوند انرژی عسلویه",
     dateEn: "May 2024 - Oct 2025",
@@ -185,10 +197,10 @@ const experienceData = [
       "Created dynamic internal process tools (e.g., employee representative election system).",
     ],
     achievementsFa: [
-      "راه‌اندازی سامانه جامع مانیتورینگ Zabbix برای پایش لحظه‌ای سرورها و سوئیچ‌ها و کاهش چشمگیر زمان تشخیص خرابی (MTTR).",
-      "مدیریت پیکربندی‌های شبکه (VLANs و Port Security) و رفع عیوب زیرساختی، که منجر به کاهش شدید تیکت‌های قطعی شد.",
-      "ارائه پشتیبانی فنی تخصصی لایه ۲ و همکاری کلیدی در مهاجرت سرورها و شبکه‌های فیزیکی و مجازی سازمان.",
-      "طراحی نرم‌افزار بومی و اختصاصی جهت برگزاری انتخابات الکترونیکی نماینده کارگری.",
+      "استقرار جامع پلتفرم مانیتورینگ Zabbix برای پایش پیوسته سرورها و سوئیچ‌ها، که منجر به کاهش چشمگیر زمان کشف و رفع خرابی (MTTR) گردید.",
+      "پیکربندی پیشرفته و ایمن‌سازی سوئیچ‌ها و روترها (مدیریت VLAN و Port Security)، که به طور محسوسی حوادث قطعی شبکه را مهار کرد.",
+      "ارائه پشتیبانی سطح بالا برای زیرساخت شبکه لایه ۲ و مدیریت مهاجرت یکپارچه سرویس‌ها به زیرساخت‌های جدید مجازی و فیزیکی.",
+      "توسعه راهکارهای نرم‌افزاری بومی و ایمن جهت اجرای مکانیزه فرآیندهای حساس داخلی از جمله سیستم رای‌گیری نمایندگان کارگری.",
     ],
   },
 ];
@@ -225,6 +237,20 @@ const skills = {
     titleFa: "توسعه نرم‌افزار و هوش مصنوعی",
     items: ["Python / FastAPI", "Next.js / React 19", "Tailwind CSS", "Docker / DevOps", "Deep Learning (CNN)", "NLP / Document OCR"],
   },
+};
+
+const getSkillIcon = (skill: string) => {
+  const s = skill.toLowerCase();
+  if (s.includes("cisco") || s.includes("network") || s.includes("port")) return <Network size={12} className="text-tech-indigo" />;
+  if (s.includes("stp") || s.includes("vlan") || s.includes("routing")) return <Layers size={12} className="text-emerald-green" />;
+  if (s.includes("security") || s.includes("hardening")) return <Shield size={12} className="text-amber-500" />;
+  if (s.includes("zabbix") || s.includes("monitoring")) return <Activity size={12} className="text-emerald-500" />;
+  if (s.includes("python") || s.includes("fastapi")) return <Terminal size={12} className="text-blue-500" />;
+  if (s.includes("react") || s.includes("next") || s.includes("tailwind")) return <Code2 size={12} className="text-cyan-500" />;
+  if (s.includes("docker") || s.includes("devops")) return <Server size={12} className="text-blue-600" />;
+  if (s.includes("deep") || s.includes("cnn") || s.includes("ai")) return <Cpu size={12} className="text-purple-500" />;
+  if (s.includes("nlp") || s.includes("ocr")) return <BrainCircuit size={12} className="text-pink-500" />;
+  return <Database size={12} className="text-zinc-500" />;
 };
 
 export default function Portfolio() {
@@ -336,21 +362,39 @@ export default function Portfolio() {
           {/* LEFT SIDE PANEL (Fixed on Desktop) */}
           <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
             <div>
-              {/* Profile Meta info */}
-              <div className="space-y-4">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-tech-indigo/10 text-tech-indigo border border-tech-indigo/20">
-                  <Zap size={12} className="animate-pulse" />
-                  <span>{t.title}</span>
+              {/* Profile Image & Meta info */}
+              <div className="space-y-6">
+                {/* Avatar Image */}
+                <div className="relative inline-block">
+                  <div className="absolute inset-0 bg-gradient-to-br from-tech-indigo to-emerald-green rounded-3xl blur-md opacity-30 animate-pulse"></div>
+                  <img src="/avatar.png" alt="Ali Jahani Avatar" className="relative w-28 h-28 object-cover rounded-3xl border border-white/10 shadow-xl" />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-black tracking-tight text-zinc-950 dark:text-white">
-                  {t.name}
-                </h1>
-                <h2 className="text-sm md:text-base font-semibold text-zinc-650 dark:text-zinc-400">
-                  {t.sub_title}
-                </h2>
-                <p className="max-w-xs text-xs md:text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
-                  {t.about_pitch}
-                </p>
+                
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-tech-indigo/10 text-tech-indigo border border-tech-indigo/20">
+                    <Zap size={12} className="animate-pulse" />
+                    <span>{t.title}</span>
+                  </div>
+                  <h1 className="text-4xl md:text-5xl font-black tracking-tight text-zinc-950 dark:text-white">
+                    {t.name}
+                  </h1>
+                  <h2 className="text-sm md:text-base font-semibold text-zinc-650 dark:text-zinc-400">
+                    {t.sub_title}
+                  </h2>
+                  <p className="max-w-xs text-xs md:text-sm leading-relaxed text-zinc-500 dark:text-zinc-400 text-justify">
+                    {t.about_pitch}
+                  </p>
+
+                  {/* Hero Actions */}
+                  <div className="flex items-center gap-3 pt-2">
+                    <a href="/Alijahani_Resume.pdf" target="_blank" rel="noopener noreferrer" className="px-4 py-2.5 rounded-xl bg-tech-indigo text-white text-xs font-bold shadow-lg shadow-tech-indigo/20 hover:bg-tech-indigo/90 transition-all cursor-pointer">
+                      {t.download_cv}
+                    </a>
+                    <a href="#contact" className="px-4 py-2.5 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white text-xs font-bold border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all cursor-pointer">
+                      {t.direct_contact}
+                    </a>
+                  </div>
+                </div>
               </div>
 
               {/* Scrollspy Navigation Menu */}
@@ -435,6 +479,13 @@ export default function Portfolio() {
                 >
                   <Mail size={20} />
                 </a>
+                <a
+                  href="tel:+989137901844"
+                  className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-450 dark:hover:text-zinc-100 transition-all"
+                  title="Phone"
+                >
+                  <Phone size={20} />
+                </a>
               </div>
             </div>
           </header>
@@ -447,7 +498,7 @@ export default function Portfolio() {
               <h2 className="text-xs font-black uppercase tracking-widest text-zinc-900 dark:text-zinc-50 lg:hidden">
                 {t.about_nav}
               </h2>
-              <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 text-justify">
                 {t.about_p1}
               </p>
             </section>
@@ -498,7 +549,7 @@ export default function Portfolio() {
                     transition={{ duration: 0.15 }}
                     className="space-y-4"
                   >
-                    <p className="text-xs leading-relaxed text-zinc-650 dark:text-zinc-400">
+                    <p className="text-xs leading-relaxed text-zinc-650 dark:text-zinc-400 text-justify">
                       {activeTab === "enterprises"
                         ? t.enterprises_desc
                         : activeTab === "startups"
@@ -552,7 +603,7 @@ export default function Portfolio() {
                       {isRtl ? exp.companyFa : exp.companyEn}
                     </p>
 
-                    <ul className="list-disc list-inside text-xs text-zinc-650 dark:text-zinc-400 space-y-1.5 pl-2 mt-4 leading-relaxed">
+                    <ul className="list-disc list-inside text-xs text-zinc-650 dark:text-zinc-400 space-y-1.5 pl-2 mt-4 leading-relaxed text-justify">
                       {(isRtl ? exp.achievementsFa : exp.achievementsEn).map((ach, idx) => (
                         <li key={idx}>{ach}</li>
                       ))}
@@ -633,7 +684,8 @@ export default function Portfolio() {
                     </h4>
                     <div className="flex flex-wrap gap-1.5">
                       {skills.infra.items.map((item, idx) => (
-                        <span key={idx} className="text-xs px-2.5 py-1 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/30 text-zinc-800 dark:text-zinc-300">
+                        <span key={idx} className="flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/30 text-zinc-800 dark:text-zinc-300">
+                          {getSkillIcon(item)}
                           {item}
                         </span>
                       ))}
@@ -647,7 +699,8 @@ export default function Portfolio() {
                     </h4>
                     <div className="flex flex-wrap gap-1.5">
                       {skills.software.items.map((item, idx) => (
-                        <span key={idx} className="text-xs px-2.5 py-1 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/30 text-zinc-800 dark:text-zinc-300">
+                        <span key={idx} className="flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/30 text-zinc-800 dark:text-zinc-300">
+                          {getSkillIcon(item)}
                           {item}
                         </span>
                       ))}
@@ -664,7 +717,7 @@ export default function Portfolio() {
                 <h2 className="text-xs font-black uppercase tracking-widest text-zinc-900 dark:text-zinc-50">
                   {t.contact_nav}
                 </h2>
-                <p className="text-xs text-zinc-500 dark:text-zinc-450 leading-relaxed">
+                <p className="text-xs text-zinc-500 dark:text-zinc-450 leading-relaxed text-justify">
                   {t.contact_subtitle}
                 </p>
               </div>
